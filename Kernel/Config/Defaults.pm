@@ -1819,14 +1819,14 @@ via the Preferences button after logging in.
     };
 
 # CustomerUser
-# (customer user ldap backend and settings)
+# (customer user LDAP backend and settings)
 #    $Self->{CustomerUser} = {
 #        Name => 'LDAP Backend',
 #        Module => 'Kernel::System::CustomerUser::LDAP',
 #        Params => {
-#            # ldap host
+#            # LDAP host
 #            Host => 'ldaps://bay.csuhayward.edu',
-#            # ldap base dn
+#            # LDAP base dn
 #            BaseDN => 'ou=seas,o=csuh',
 #            # search scope (one|sub)
 #            SSCOPE => 'sub',
@@ -1834,14 +1834,14 @@ via the Preferences button after logging in.
 #            # anonymous user does NOT have permission to read from the LDAP tree
 #            UserDN => '',
 #            UserPw => '',
-#            # in case you want to add always one filter to each ldap query, use
+#            # in case you want to add always one filter to each LDAP query, use
 #            # this option. e. g. AlwaysFilter => '(mail=*)' or AlwaysFilter => '(objectclass=user)'
 #            AlwaysFilter => '',
 #            # if the charset of your ldap server is iso-8859-1, use this:
 #            # SourceCharset => 'iso-8859-1',
 #            # die if backend can't work, e. g. can't connect to server
 #            Die => 0,
-#            # Net::LDAP new params (if needed - for more info see perldoc Net::LDAP)
+#            # Net::LDAP::new() parameters (if needed - for more info see perldoc Net::LDAP)
 #            Params => {
 #                port    => 389,
 #                timeout => 120,
@@ -1868,13 +1868,13 @@ via the Preferences button after logging in.
 #        CustomerUserNameFieldsJoin => ' ',
 #        # show customer user and customer tickets in customer interface
 #        CustomerUserExcludePrimaryCustomerID => 0,
-#        # add a ldap filter for valid users (expert setting)
+#        # add a LDAP filter for valid users (expert setting)
 #        # CustomerUserValidFilter => '(!(description=gesperrt))',
 #        # Translate manager flag in mapping from its Distinguished Name to cn, sAMAccountName, uid, mail, etc.
 #        TranslateManagerTo => 'sAMAccountName',
 #        # admin can't change customer preferences
 #        AdminSetPreferences => 0,
-#        # cache time to live in sec. - cache any ldap queries
+#        # cache time to live in sec. - cache any LDAP queries
 #        CacheTTL => 0,
 #        Map => [
 #            # note: Login, Email and CustomerID needed!
