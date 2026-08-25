@@ -561,6 +561,7 @@ sub LoadDefaults {
 #        timeout => 120,
 #        async   => 0,
 #        version => 3,
+#        raw     => qr/userCertificate|;binary/,
 #    };
 
     # Die if backend can't work, e. g. can't connect to server.
@@ -736,6 +737,7 @@ sub LoadDefaults {
 #        timeout => 120,
 #        async   => 0,
 #        version => 3,
+#        raw     => qr/userCertificate|;binary/,
 #    };
 
 
@@ -1587,6 +1589,7 @@ via the Preferences button after logging in.
 #        timeout => 120,
 #        async   => 0,
 #        version => 3,
+#        raw     => qr/userCertificate|;binary/,
 #    };
     # Net::LDAP::start_tls verify type (if needed - for more info see Net::LDAP::start_tls)
 #    $Self->{'Customer::AuthModule::LDAP::StartTLS'} = 'required';
@@ -1844,7 +1847,8 @@ via the Preferences button after logging in.
 #                timeout => 120,
 #                async   => 0,
 #                version => 3,
-#                verify  => 'require', 
+#                verify  => 'require',
+#                raw     => qr/userCertificate|;binary/,
 #            },
 #        },
 #        # customer unique id
